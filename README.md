@@ -11,7 +11,7 @@ This is still a work in progress, a successful connection has not been made.
 1. sudo ufw allow 22; sudo ufw allow 4500; sudo ufw allow 500; sudo ufw enable;
 1. Open all TCP & UDP connections on EC2 Security group
 1. docker build -t vpn .
-1. docker run -privileged -p 500:500/udp -p 4500:4500/udp vpn
+1. docker run --privileged -d -p 500:500/udp -p 4500:4500/udp -p 1701:1701/udp vpn
 
 ### References for setting up L2TP / IPSec VPN
 - https://help.ubuntu.com/community/L2TPServer
